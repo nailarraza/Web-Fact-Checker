@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoax News Detection Result</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body class="container mt-5">
+    
+        <h1 class="text-center">Hoax News Detection 📰</h1>
+        <br>
+        <hr>
+    </br>
+    <h5 class="text-center" >Entered text = <br><br> {{ text }}</h5>
+    <br>
+    <hr>
+    
+    <div  class="form-group">
+        <br>
+    <p class="text-center">Prediksi Naive Bayes menyatakan ini berita : 
+        {% if nb_prediction == 0 %}
+            <b><span style="color: red;">Hoax &#9940;</span></b>
+        {% else %}
+            <b><span style="color: green;">Real &#9989;</span></b>
+        {% endif %}
+    </p>
+
+    <p class="text-center">Prediksi Random Forest menyatakan ini berita : 
+        {% if rf_prediction == 0 %}
+            <b><span style="color: red;">Hoax &#9940; </span></b>
+        {% else %}
+            <b><span style="color: green;">Real &#9989;</span></b>
+        {% endif %}
+    </p>
+</div>
+</body>
+<!-- Bootstrap JS and Popper.js (Optional, for Bootstrap functionality) -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+<br>
+<br>
+<hr>
+<footer class="bg-primary text-center text-lg-start text-white">
+
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(255, 255, 255, 0.2)">
+      © 2024 Copyright with &#129392;
+      <a class="text-white" href="">Yofhi, Daras, Nailar - Komputasi Paralel</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+
+</html>

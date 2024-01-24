@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoax News Detection</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body class="container mt-5">
+    <h1 class="text-center">Hoax News Detection 📰</h1>
+    <br>
+    <hr>
+    <form action="/predict" method="post" class="mt-4">
+        <div class="form-group">
+            <label for="text">Masukkan text isi berita :</label>
+            <textarea class="form-control" id="text" name="text" rows="4" placeholder="Tulis teks isi berita disini"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Cek Narasi Berita 🔍</button>
+    </form>
+
+    <!-- Bootstrap JS and Popper.js (Optional, for Bootstrap functionality) -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+<br>
+<br>
+<hr>
+<footer class="bg-primary text-center text-lg-start text-white">
+
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 38, 255, 0.2)">
+      © 2024 Copyright with &#129392;
+      <a class="text-white" href="">Yofhi, Daras, Nailar - Komputasi Paralel</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+</html>
